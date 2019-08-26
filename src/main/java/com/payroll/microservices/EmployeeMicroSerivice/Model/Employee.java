@@ -1,10 +1,20 @@
 package com.payroll.microservices.EmployeeMicroSerivice.Model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Employee {
 
+    @Column(name = "first_name")
     private String firstName;
+    @Column(name = "last_name")
     private String lastName;
+    @Column(name = "salary")
     private double salary;
+    @Id
+    @Column(name = "emp_id")
     private Long empId;
 
     public Employee (String firstName, String lastName ,double salary, Long empId ){
