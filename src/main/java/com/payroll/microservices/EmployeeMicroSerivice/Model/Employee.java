@@ -17,6 +17,16 @@ public class Employee {
     @Column(name = "emp_id")
     private Long empId;
 
+    public String getPort() {
+        return port;
+    }
+
+    public void setPort(String port) {
+        this.port = port;
+    }
+
+    private String port;
+
     public Employee (String firstName, String lastName ,double salary, Long empId ){
         super();
         this.empId=empId;
